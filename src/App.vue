@@ -4,11 +4,7 @@
       <BarraLateral @aoTemaAlterado="trocarTema"  />
     </div>
     <div class="column is-three-quarter conteudo">
-      <Formulario @aoSalvarTarefa="salvarTarefa" />
-      <div class="lista">
-        <div v-if="listaEstaVazia">A lista está vazia</div>
-        <Tarefa v-for="(tarefa, index) in tarefas" :key="index" :tarefa="tarefa" />
-      </div>
+      <router-view></router-view>
     </div>
   </main>
 </template>
@@ -16,16 +12,12 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import BarraLateral from './components/BarraLateral.vue';
-import Formulario from './components/Formulario.vue';
-import Tarefa from './components/Tarefa.vue';
 import type { TTarefa } from './types/TTarefa';
 
 export default defineComponent({
   name: 'App',
   components: {
     BarraLateral,
-    Formulario,
-    Tarefa
   },
   data (){
     return {

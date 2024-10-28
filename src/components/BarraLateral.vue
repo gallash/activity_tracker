@@ -6,6 +6,22 @@
         <button class="button" @click="alterarTema" >
             <span>{{textoBotao}} tema claro</span>
         </button>
+        <nav class="panel mt-5">
+            <ul>
+                <li>
+                <router-link to="/" class="link">
+                    <i class="fas fa-tasks"></i>
+                    tarefas
+                </router-link>
+                </li>
+                <li>
+                <router-link to="/projetos" class="link">
+                    <i class="fas fa-project-diagram"></i>
+                    projetos
+                </router-link>
+                </li>
+            </ul>
+        </nav>
     </header>
 </template>
 
